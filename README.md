@@ -155,5 +155,5 @@ Although this project is a useful tool, there are still existed some limitations
 This project is under the **GNU General Public License version 3 (GPLv3)**. Any contributions are welcomed.  
 If you encountered some problem, make an issue on GitHub and we will help you as soon as possible.  
 If you have any idea to improve this tool, please let us know through the issue or pull request functionality on GitHub.  
-Cause the tested platforms are limited. If this tool works fine on your platform, please create an issue on GitHub with the detailed version of your platform.  
+Cause the tested platforms are limited. If this tool works fine on your platform, please reply to [this thread](https://github.com/ifTNT/arduino-cscope-ctags/issues/1) on GitHub with the detailed version of your platform.  
 You can also contact us via the e-mail _iftnt1999 [at] gmail.com_. We will appreciate if hearing any feedback from you.
