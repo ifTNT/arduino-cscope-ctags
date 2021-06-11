@@ -9,7 +9,31 @@ Thus, the purpose of this tool is to simplify the work to generate the symbol da
 
 ## How to use
 
+clear the cache /tmp/arduino-core-cache
+
 ## How to install
+
+1. Install python3.6, arduino-cli, cscope and ctags via the package manage of your distrubution.
+2. Download the source code of this project.
+
+```bash
+git clone https://github.io/ifTNT/arduino-cscope-ctags/arduino-cscope-ctags.git
+cd arduino-cscope-ctags/
+```
+
+3. Use the following command to install other dependencies.
+
+```bash
+sudo pip install -r requirements.txt
+```
+
+4. Copy the executable to the system directory.
+
+```bash
+sudo cp arduino-cscope-ctags /usr/local/bin/
+```
+
+5. Enjoy hacking!
 
 ### Dependencies
 
