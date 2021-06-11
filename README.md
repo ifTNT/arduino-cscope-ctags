@@ -8,7 +8,8 @@ Generating cross-reference between Arduino sketches, libraries, and cores for co
 ## Introduction
 
 Arduino is a convenient and easy-to-use environment for developing embedding applications. On the other hand, tracing the code of Arduino core can help us to realize how the lower-level function was implemented and further assist us in debugging. However, it's tough to work that tracing code with vanilla Arduino IDE, especially with third-party core variants like ESP32.  
-Thus, the purpose of this tool is to simplify the work to generate the database of cross-references from the Arduino sketch using cscope and ctags. Once the database is generated, you can begin tracing the code use cscope/ctags with any text editor like vim, emacs, vscode, or sublime text.
+Thus, the purpose of this tool is to simplify the work to generate the database of cross-references from the Arduino sketch using cscope and ctags. Once the database is generated, you can begin tracing the code use cscope/ctags with any text editor like vim, emacs, vscode, or sublime text.  
+You may be interested in another article about this project posted on the official Arduino forum, "[Understand how Arduino really works through code tracing with cscope and ctags](https://forum.arduino.cc/t/understand-how-arduino-really-works-through-code-tracing-with-cscope-and-ctags/873650)," this article contains more use cases about this tool.
 
 ## How to Use
 
