@@ -1,6 +1,7 @@
 # arduino-cscope-ctags
 
 Generating database of cscope/ctags from Arduino sketch in one command for code tracing.
+Navigating under the Arduino sketch.
 
 ## Introduction
 
@@ -24,8 +25,9 @@ Thus, the purpose of this tool is to simplify the work to generate the symbol da
    arduino-cli board listall | grep NodeMCU-32S
    ```
 
+   Result:  
    ![result](https://i.imgur.com/qfcC3KT.png)  
-   The fqbn of NodeMCU-32S is _esp32:esp32:nodemcu-32s_
+   The FQBN of NodeMCU-32S is _esp32:esp32:nodemcu-32s_
 
 2. Change directory to your target sketch
 
@@ -40,9 +42,10 @@ Thus, the purpose of this tool is to simplify the work to generate the symbol da
    ls -alh .tags
    ```
 
+   Result:  
    ![](https://i.imgur.com/VOyidp2.png)  
    ![](https://i.imgur.com/uZhXUCx.png)  
-   Ctags may generate a lot of warning messages about ignoring null tags, but that's ok. The program will display 'All done successfully' when there's no error occurred during retrieving symbols.  
+   Ctags may generate a lot of warning messages about ignoring null tags, but that's ok. The program will display "All done successfully" when there's no error occurred during retrieving symbols.  
    And the program will generate a directory named '.tags' in the directory of your sketch by default. The symbol database of cscope and ctags are presented in the directory mentioned above.
 
 4. Load symbol database to your text editor.
@@ -60,8 +63,11 @@ Thus, the purpose of this tool is to simplify the work to generate the symbol da
    ![](https://i.imgur.com/3t7I1MW.png)  
    ![](https://i.imgur.com/tzK9sda.png)  
    You may want to further learn how to use cscope and ctags from the following resources.
+
    - [The Vim/Cscope tutorial](http://cscope.sourceforge.net/cscope_vim_tutorial.html)
    - [Ctags Tutorial from University of Washington](https://courses.cs.washington.edu/courses/cse451/10au/tutorials/tutorial_ctags.html)
+
+   Enjoy hacking!
 
 ## How to install
 
@@ -108,7 +114,7 @@ It shouldn't be any problem if you are using Linux based operating system and py
    sudo ln -s ${PWD}/arduino-cscope-ctags /usr/local/bin/
    ```
 
-6. Enjoy hacking!
+6. All set. You can then follow the instruction in the previous section to use _arduino-cscope-ctags_.
 
 ## Command-line arguments
 
@@ -121,13 +127,13 @@ arduino-cscope-ctags [-h] [-o DB_OUTPUT] fqbn sketch_path
 ### Positional arguments
 
 - fqbn : The Fully Qualified Board Name (FQBN) of your target board. It can be obtained by command `arduino-cli board listall`. e.g.: arduino:avr:uno
-- sketch_path : The path to your Arduino sketch. Must contain at least one '.ino' file.
+- sketch_path : The path to your Arduino sketch. Must contain at least one ".ino" file.
 
 ### Optional arguments
 
 - -h, --help : show this help message and exit
 - -o DB_OUTPUT, --db-output DB_OUTPUT
-  - The base output folder related to your sketch directory. Default is the '.tags' folder in your sketch directory.
+  - The base output folder related to your sketch directory. Default is the ".tags" folder in your sketch directory.
 
 ## Limitations and known issues
 
@@ -138,7 +144,7 @@ Although this project is a useful tool, there are still existed some limitations
 
 ## How to contribute
 
-Any contributions are welcomed.  
+This project is under the **GNU General Public License version 3 (GPLv3)**. Any contributions are welcomed.  
 If you encountered some problem, make an issue on GitHub and we will help you as soon as possible.  
 If you have any idea to improve this tool, please let us know through the issue or pull request functionality on GitHub.  
 Cause the tested platforms are limited. If this tool works fine on your platform, please create an issue on GitHub with the detailed version of your platform.  
