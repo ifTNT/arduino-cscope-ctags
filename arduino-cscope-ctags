@@ -135,7 +135,7 @@ def main(board_fqbn, sketch_path, db_output_path):
     "-L",                          # Specified the list of source file
     str(including_list_path),
     "-f",                          # Specified the output file path
-    str(ctags_database_path)
+    str(ctags_database_path.name)
   ], cwd=database_path)
 
   print("\nAll done successfully\n")
