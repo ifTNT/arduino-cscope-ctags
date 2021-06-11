@@ -149,6 +149,7 @@ def main(board_fqbn, sketch_path, db_output_path):
   except subprocess.CalledProcessError as e:
     print ( "Error in executing cscope:\nreturn code: ", e.returncode, "\nOutput: ", e.stderr.decode("utf-8") )
     raise
+  print()
 
 
   print(f"Generating database of ctags {ctags_database_path}")
@@ -156,6 +157,7 @@ def main(board_fqbn, sketch_path, db_output_path):
     ctags = subprocess.run([
       "ctags",
       "-R",                          # Recursively look up source file
+      "--verbose",                   # Print more information
       f"--langmap=c++:.cpp.ino.pde", # Mapping of Arduino sketch
       "-L",                          # Specified the list of source file
       str(including_list_path),
