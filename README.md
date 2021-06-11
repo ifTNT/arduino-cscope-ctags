@@ -58,7 +58,10 @@ Thus, the purpose of this tool is to simplify the work to generate the symbol da
 5. You are done.
    Now you can begin code tracing. For example, we can use `:cs find c setup` to investigate how the task is created and where is the _setup()_ be called at the beginning of arduino-esp32.  
    ![](https://i.imgur.com/3t7I1MW.png)  
-   ![](https://i.imgur.com/tzK9sda.png)
+   ![](https://i.imgur.com/tzK9sda.png)  
+   You may want to further learn how to use cscope and ctags from the following resources.
+   - [The Vim/Cscope tutorial](http://cscope.sourceforge.net/cscope_vim_tutorial.html)
+   - [Ctags Tutorial from University of Washington](https://courses.cs.washington.edu/courses/cse451/10au/tutorials/tutorial_ctags.html)
 
 ## How to install
 
