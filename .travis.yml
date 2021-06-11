@@ -14,8 +14,6 @@ env:
   - PATH="${PATH}:${HOME}/local/bin"
 language: python
 python:
-  - "3.4"
-  - "3.5"
   - "3.6"
   - "3.7"
   - "3.8"
@@ -24,7 +22,7 @@ python:
   - "nightly" # nightly build
 # command to install dependencies
 install:
-  - sudo pip install -r requirements.txt
+  - sudo pip3 install -r requirements.txt
   - chmod +x arduino-cscope-ctags
 # command to run tests
 script:
