@@ -4,15 +4,15 @@ Generating database of cscope/ctags from Arduino sketch in one command for code 
 
 ## Introduction
 
-Arduino is a convenient environment for developing embedding application. On the other hand, tracing the code of Arduino core can help us to realize how the lower-level function was implemented and futher assist us in debugging. However, it's a tough work that tracing code with vanilla Arduino IDE, especially with third party core variants like ESP32.  
-Thus, the purpose of this tool is to simplify the work to generate the symbol database of cscope and ctags from Arduino sketch. Once the database is generated, you can begin tracing the code use cscope/ctags with other text editor like vim, emacs, vscode or sublime text.
+Arduino is a convenient environment for developing embedding applications. On the other hand, tracing the code of Arduino core can help us to realize how the lower-level function was implemented and further assist us in debugging. However, it's tough to work that tracing code with vanilla Arduino IDE, especially with third-party core variants like ESP32.  
+Thus, the purpose of this tool is to simplify the work to generate the symbol database of cscope and ctags from the Arduino sketch. Once the database is generated, you can begin tracing the code use cscope/ctags with another text editor like vim, emacs, vscode, or sublime text.
 
 ## How to use
 
-### The context of example
+### The context of the example
 
 - Board: NodeMCU-32S
-- Third Party Core: [arduino-esp32](https://github.com/espressif/arduino-esp32/tree/1.0.6)
+- Third-Party Core: [arduino-esp32](https://github.com/espressif/arduino-esp32/tree/1.0.6)
 - Sketch: [ESP32/FreeRTOS](https://github.com/espressif/arduino-esp32/blob/1.0.6/libraries/ESP32/examples/FreeRTOS/FreeRTOS.ino)
 - Text Editor: vim
 
@@ -43,7 +43,7 @@ Thus, the purpose of this tool is to simplify the work to generate the symbol da
    ![](https://i.imgur.com/3oYbRuV.png)  
    ![](https://i.imgur.com/m9G8li7.png)  
    ![](https://i.imgur.com/uZhXUCx.png)  
-   Ctags may generate a lot of warning message about ignoring null tags, but that's ok. The program will display 'All done successfully' when there's no error occured during retriving symbols.  
+   Ctags may generate a lot of warning messages about ignoring null tags, but that's ok. The program will display 'All done successfully' when there's no error occurred during retrieving symbols.  
    And the program will generate a directory named '.tags' in the directory of your sketch by default. The symbol database of cscope and ctags are presented in the directory mentioned above.
 
 4. Load symbol database to your text editor.
@@ -57,7 +57,7 @@ Thus, the purpose of this tool is to simplify the work to generate the symbol da
    ```
 
 5. You are done.
-   Now you can begin code tracing. For example, we can use `:cs find c setup` to investigate how the task is created and where is the _setup()_ be called at the beging of arduino-esp32.  
+   Now you can begin code tracing. For example, we can use `:cs find c setup` to investigate how the task is created and where is the _setup()_ be called at the beginning of arduino-esp32.  
    ![](https://i.imgur.com/3t7I1MW.png)  
    ![](https://i.imgur.com/tzK9sda.png)
 
@@ -65,7 +65,7 @@ Thus, the purpose of this tool is to simplify the work to generate the symbol da
 
 ### Dependencies
 
-This tool depends on python, [arduino-cli](https://github.com/arduino/arduino-cli), [cscope](http://cscope.sourceforge.net/) and [ctags](https://github.com/universal-ctags/ctags).  
+This tool depends on python, [arduino-cli](https://github.com/arduino/arduino-cli), [cscope](http://cscope.sourceforge.net/), and [ctags](https://github.com/universal-ctags/ctags).  
 Specifically, this tool was developed and be tested on the following platform.
 
 - ArchLinux 5.11.16-arch1-1
@@ -74,11 +74,11 @@ Specifically, this tool was developed and be tested on the following platform.
 - Cscope 15.9
 - Universal Ctags 5.9.0
 
-It shouldn't be any problem if you are using Linux based operating system and python 3.6~3.9. But working on other platform is not guaranteed. If you are encounting any problem to get this tool work, please kindly let me know. The contacting informations are listed below.
+It shouldn't be any problem if you are using Linux based operating system and python 3.6~3.9. But working on other platforms is not guaranteed. If you are encountering any problems getting this tool to work, please kindly let me know. The contacting information are listed below.
 
 ### Installing instruction
 
-1. Install python3.6, arduino-cli, cscope and ctags via the package manager of your distrubution.
+1. Install python3.6, arduino-cli, cscope and ctags via the package manager of your distribution.
 2. Download the source code of this project.
 
    ```bash
@@ -119,7 +119,7 @@ arduino-cscope-ctags [-h] [-o DB_OUTPUT] fqbn sketch_path
 ### Positional arguments
 
 - fqbn : The Fully Qualified Board Name (FQBN) of your target board. It can be obtained by command `arduino-cli board listall`. e.g.: arduino:avr:uno
-- sketch_path : The path to your Arduino sketch. Must containing at least one '.ino' file.
+- sketch_path : The path to your Arduino sketch. Must contain at least one '.ino' file.
 
 ### Optional arguments
 
@@ -129,8 +129,8 @@ arduino-cscope-ctags [-h] [-o DB_OUTPUT] fqbn sketch_path
 
 ## How to contribute
 
-Any contribution are welcomed.  
-If you encounterd some problem, make a issue on GitHub and we will help you as soon as possible.  
+Any contributions are welcomed.  
+If you encountered some problem, make an issue on GitHub and we will help you as soon as possible.  
 If you have any idea to improve this tool, please let us know through the issue or pull request functionality on GitHub.  
 Cause the tested platforms are limited. If this tool works fine on your platform, please create an issue on GitHub with the detailed version of your platform.  
-You can also contact us via the e-mail _iftnt1999 [at] gmail.com_. We will apprciate if hearing any feedback from you.
+You can also contact us via the e-mail _iftnt1999 [at] gmail.com_. We will appreciate if hearing any feedback from you.

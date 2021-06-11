@@ -145,7 +145,7 @@ if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument("-o", "--db-output", help="The base output folder related to your sketch directory. Default is the '.tags' folder in your sketch directory.", default=".tags")
   parser.add_argument("fqbn", help="The Fully Qualified Board Name (FQBN) of your target board. It can be obtained by command `arduino-cli board listall`. e.g.: arduino:avr:uno")
-  parser.add_argument("sketch_path", help="The path to your Arduino sketch. Must containing at least one '.ino' file.")
+  parser.add_argument("sketch_path", help="The path to your Arduino sketch. Must contain at least one '.ino' file.")
   args = parser.parse_args()
 
   if not Path(args.sketch_path).is_dir():
