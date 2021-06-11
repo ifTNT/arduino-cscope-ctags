@@ -1,7 +1,6 @@
 # arduino-cscope-ctags
 
-Generating database of cscope/ctags from Arduino sketch in one command for code tracing.
-Navigating under the Arduino sketch.
+Generating cross-reference between Arduino sketches, libraries, and cores for code tracing. Navigating under Arduino sketches using cscope/ctags.
 
 ## Introduction
 
