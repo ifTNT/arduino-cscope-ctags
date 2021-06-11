@@ -90,8 +90,9 @@ def main(board_fqbn, sketch_path, db_output_path):
     compile_entities = filter(lambda x: x['file'] is not None, compile_entities)
     for ce in compile_entities:
 
-      # Append the source file to the list
-      included_files.add(get_abs_path(ce['file']))
+      # Append the source file to the list (excluding combined sketch file)
+      if not re.match(".+\.(pde|ino)\.cpp$", ce['file']):
+        included_files.add(get_abs_path(ce['file']))
 
       # Retrive the including path of header
       # Filter out the include path from compiling arguments

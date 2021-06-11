@@ -127,6 +127,13 @@ arduino-cscope-ctags [-h] [-o DB_OUTPUT] fqbn sketch_path
 - -o DB_OUTPUT, --db-output DB_OUTPUT
   - The base output folder related to your sketch directory. Default is the '.tags' folder in your sketch directory.
 
+## Limitations and known issues
+
+Although this project is a useful tool, there are still existed some limitations of this project.
+
+1. **Doesn't support Windows.** The project is developed and be tested on Linux. The support of Windows is one of the future works.
+2. **Can't trace pre-compiled binary.** Cscope and ctags are born for code tracing. However, all of the core implementation involved in trade secrets are released in the pre-compiled binary format. So there is always some floor in the code that we can't further dig into with cscope/ctags.
+
 ## How to contribute
 
 Any contributions are welcomed.  
