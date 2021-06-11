@@ -40,8 +40,7 @@ Thus, the purpose of this tool is to simplify the work to generate the symbol da
    ls -alh .tags
    ```
 
-   ![](https://i.imgur.com/3oYbRuV.png)  
-   ![](https://i.imgur.com/m9G8li7.png)  
+   ![](https://i.imgur.com/VOyidp2.png)  
    ![](https://i.imgur.com/uZhXUCx.png)  
    Ctags may generate a lot of warning messages about ignoring null tags, but that's ok. The program will display 'All done successfully' when there's no error occurred during retrieving symbols.  
    And the program will generate a directory named '.tags' in the directory of your sketch by default. The symbol database of cscope and ctags are presented in the directory mentioned above.
