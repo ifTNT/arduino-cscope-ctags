@@ -8,10 +8,10 @@ test_sketch_path = Path("./test/FreeRTOS_ESP32").absolute()
 
 def test_main_default():
   arduino_cli = subprocess.run([
-    "arduino-cscope-ctags",
+    "./arduino-cscope-ctags",
     "esp32:esp32:nodemcu-32s",
     str(test_sketch_path)
-  ], cwd=test_sketch_path)
+  ])
 
   tags_path = test_sketch_path/".tags"
 
@@ -26,12 +26,12 @@ def test_main_default():
 
 def test_main_custom_output():
   arduino_cli = subprocess.run([
-    "arduino-cscope-ctags",
+    "./arduino-cscope-ctags",
     "-o",
     ".tags/custom/",
     "esp32:esp32:nodemcu-32s",
     str(test_sketch_path)
-  ], cwd=test_sketch_path)
+  ])
 
   tags_path = test_sketch_path/".tags/custom"
 

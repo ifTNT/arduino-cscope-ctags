@@ -20,7 +20,6 @@ python:
 install:
   - sudo pip install -r requirements.txt
   - chmod +x arduino-cscope-ctags
-  - sudo ln -s ${PWD}/arduino-cscope-ctags /usr/local/bin/
 # command to run tests
 script:
   - pytest "test/"
