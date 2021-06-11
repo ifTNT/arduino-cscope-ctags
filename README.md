@@ -81,15 +81,15 @@ Thus, the purpose of this tool is to simplify the work to generate the database 
 ### i. Dependencies
 
 This tool depends on python, [arduino-cli](https://github.com/arduino/arduino-cli), [cscope](http://cscope.sourceforge.net/), and [ctags](https://github.com/universal-ctags/ctags).  
-Specifically, this tool was developed and be tested on the following platform.
+Specifically, this tool was developed and be tested on the following platform on TravisCI.
 
-- ArchLinux 5.11.16-arch1-1
-- Python 3.6
-- Arduino-cli 0.18.3
-- Cscope 15.9
-- Universal Ctags 5.9.0
+- ArchLinux, Ubuntu 16.04
+- Python >= 3.6
+- Arduino-cli == 0.18.3
+- Cscope >= 15.8
+- Universal Ctags/Exuberant Ctags >= 5.9.0
 
-It shouldn't be any problem if you are using Linux based operating system and python 3.6~3.9. But working on other platforms is not guaranteed. If you are encountering any problems getting this tool to work, please kindly let me know. The contacting information are listed below.
+It shouldn't be any problem if you are using Linux based operating system and python>=3.6. But working on other platforms is not guaranteed. If you are encountering any problems getting this tool to work, please kindly let me know. The contacting information are listed below.
 
 ### ii. Installing Instruction
 

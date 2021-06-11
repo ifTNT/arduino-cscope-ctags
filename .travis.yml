@@ -1,6 +1,7 @@
 os:
   - linux
-  - osx
+  # Travis CI doesn't support OSX with python
+  #- osx
 before_install:
   - bash test/before_install.sh
 env:
